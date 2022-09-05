@@ -2,7 +2,7 @@
 # Basic Prototype of state machines
 ### State Machine examples:
 1. Stepper Machine 
-2. Player
+2. Player Machine
 3. Fetching Machine
 
 ### Resources:
