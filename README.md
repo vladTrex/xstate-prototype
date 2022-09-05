@@ -5,6 +5,8 @@
 2. Stepper Machine
 3. Fetching Machine
 
+Codesandbox -> [CodeSandbox - CodeSandbox](https://codesandbox.io/p/github/vladTrex/xstate-prototype/draft/cranky-fog)
+
 ### Resources:
 * Basic Library -> [JavaScript State Machine](https://github.com/jakesgordon/javascript-state-machine)
 * Simple Intro to FSM -> [Finite State Machine in JavaScript](https://dev.to/spukas/finite-state-machine-in-javascript-1ki1)
