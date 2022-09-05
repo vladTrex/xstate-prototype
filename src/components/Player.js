@@ -8,21 +8,21 @@ const Player = () => {
 
   return (
     <div>
-      {state.matches('playing') && <Typography variant="h5" gutterBottom>
+      {state.matches('player.playing') && <Typography variant="h5" gutterBottom>
         🎶 Playing music now 😊
       </Typography>}
-      {state.matches('paused') && <Typography variant="h5" gutterBottom>
+      {state.matches('player.paused') && <Typography variant="h5" gutterBottom>
         🎶 The music has paused 🛑
       </Typography>}
       {state.context.count > 0 && <div>Played times: {state.context.count}</div>}
       <br />
-      {state.matches('loading') && (
+      {state.matches('player.loading') && (
         <button onClick={() => send({ type: 'SUCCESS' })}>🎵 Start playing music</button>
       )}
-      {state.matches('paused') && (
+      {state.matches('player.ready.paused') && (
         <button onClick={() => send('PLAY')}>▶️ Play</button>
       )}
-      {state.matches('playing') && (
+      {state.matches('player.ready.playing') && (
         <button onClick={() => send('PAUSE')}>⏸️ Pause</button>
       )}
     </div>
