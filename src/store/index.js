@@ -42,42 +42,6 @@ export const playerMachine = createMachine({
     // }
 });
 
-export const fetchingMachine =
-    createMachine({
-        id: "locations_fetcher",
-        initial: "idle",
-        context: {
-            locations: null,
-            error: null
-        },
-        predictableActionArguments: true,
-        states: {
-            idle: {
-                on: { FETCH: 'loading' }
-            },
-            loading: {
-                invoke: {
-                    src: () => fetchMockedDataV2(),
-                    onDone: {
-                        target: "success",
-                        actions: assign({ locations: (_, event) => event.data.locations })
-                    },
-                    onError: {
-                        target: "failure",
-                        actions: assign({ error: (_, event) => event.data })
-                    }
-                },
-                on: { CANCEL: "idle" }
-            },
-            success: {
-                on: { FETCH: "loading" }
-            },
-            failure: {
-                on: { FETCH: "loading" }
-            }
-        }
-    });
-
 export const stepperMachine = createMachine({
     id: 'stepper_machine',
     initial: 'firstStep',
@@ -143,3 +107,39 @@ export const stepperMachine = createMachine({
         complete2ndStep: assign({ is2ndDone: true }),
     }
 });
+
+export const fetchingMachine =
+    createMachine({
+        id: "locations_fetcher",
+        initial: "idle",
+        context: {
+            locations: null,
+            error: null
+        },
+        predictableActionArguments: true,
+        states: {
+            idle: {
+                on: { FETCH: 'loading' }
+            },
+            loading: {
+                invoke: {
+                    src: () => fetchMockedDataV2(),
+                    onDone: {
+                        target: "success",
+                        actions: assign({ locations: (_, event) => event.data.locations })
+                    },
+                    onError: {
+                        target: "failure",
+                        actions: assign({ error: (_, event) => event.data })
+                    }
+                },
+                on: { CANCEL: "idle" }
+            },
+            success: {
+                on: { FETCH: "loading" }
+            },
+            failure: {
+                on: { FETCH: "loading" }
+            }
+        }
+    });
