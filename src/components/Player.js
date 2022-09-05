@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from '@mui/material/Typography';
 import { useMachine } from '@xstate/react';
 import { playerMachine } from '../store';
 
@@ -7,6 +8,12 @@ const Player = () => {
 
   return (
     <div>
+      {state.matches('playing') && <Typography variant="h5" gutterBottom>
+        🎶 Playing music now 😊
+      </Typography>}
+      {state.matches('paused') && <Typography variant="h5" gutterBottom>
+        🎶 The music has paused 🛑
+      </Typography>}
       {state.context.count > 0 && <div>Played times: {state.context.count}</div>}
       <br />
       {state.matches('loading') && (

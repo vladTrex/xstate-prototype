@@ -13,6 +13,7 @@ const locations = [
     createData('Dortmund', { lat: 51.514244, long: 7.468429 }, 'DM 2229', trainInfo),
     createData('Trier', { lat: 49.750000, long: 6.633333 }, 'DM 2221', trainInfo),
     createData('Saarbrücken', { lat: 49.233334, long: 7.000000 }, 'DR 2229', trainInfo),
+    createData('Bonn', { lat: 50.733334, long: 7.100000 }, 'DA 1229', trainInfo),
 ];
 
 export const fetchMockedDataV2 = () => {

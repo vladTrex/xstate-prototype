@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
+import Map from './components/Map';
 import StepperForm from './components/Stepper';
 import { a11yProps } from './utils';
 import TabPanel from './components/TabPanel';
@@ -74,7 +75,7 @@ function App() {
             </Grid>
             <Grid item xs={4}>
               <Box pt={2}>
-                {Boolean(activeTrain) ? JSON.stringify(activeTrain) : 'No data'}
+                {Boolean(activeTrain) ?  <Map train={activeTrain} /> : 'No data'}
               </Box>
             </Grid>
           </Grid>
