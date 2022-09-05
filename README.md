@@ -11,4 +11,14 @@ Simple Intro to FSM -> [Finite State Machine in JavaScript](https://dev.to/spuka
 XState Intro, 3 Part Series -> [Hello XState Part 1: Learning state machines for frontend web development](https://dev.to/ekafyi/hello-xstate-learning-state-machines-for-frontend-web-development-5bin)
 State Pattern -> [Refactoring Guru](https://refactoring.guru/design-patterns/state/typescript/example)
 
-
+# XState terminology and definitions
+### Actions
+Entry, exit, transition actions (do actions)
+XState has inline and serialized actions
+### Context
+Extended state, assigning via **asign(…)**
+Reading from **state.context**
+A car can move or stop, but at the same time, it has different attributes like color, speed, length, etc.
+### Guards
+Inline and Serialized guards
+Multiple guarded transitions

@@ -34,16 +34,16 @@ function App() {
     <div className="App">
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange}>
-          <Tab label="Multi-Step machine" {...a11yProps(0)} />
-          <Tab label="Player Machine" {...a11yProps(1)} />
+          <Tab label="Player Machine" {...a11yProps(0)} />
+          <Tab label="Multi-Step machine" {...a11yProps(1)} />
           <Tab label="Fetching Machine" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <StepperForm />
+        <Player />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Player />
+        <StepperForm />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Box sx={{ flexGrow: 1 }}>
