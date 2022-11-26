@@ -27,3 +27,15 @@ A car can move or stop, but at the same time, it has different attributes like c
 ### Guards
 Inline and Serialized guards
 Multiple guarded transitions
+### Final States
+type **final** can triger onDone callback
+
+```
+finished: {
+  type: 'final',
+},
+...
+onDone: {
+  target: '.loading',
+},
+```
