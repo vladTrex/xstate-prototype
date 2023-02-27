@@ -69,9 +69,9 @@ export const playerMachine =
             playAudio: () => console.log('🎹 🎵 Playing music'),
             pauseAudio: () => console.log('⏸️ Pausing music'),
         },
-        // guards: {
-        //     has3Times: context => context.count < 3
-        // }
+        guards: {
+            has3Times: context => context.count < 3
+        }
     });
 
 export const stepperMachine = createMachine({

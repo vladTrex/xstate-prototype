@@ -8,10 +8,10 @@ const Player = () => {
 
   return (
     <div>
-      {state.matches('player.playing') && <Typography variant="h5" gutterBottom>
+      {state.matches('player.ready.playing') && <Typography variant="h5" gutterBottom>
         🎶 Playing music now 😊
       </Typography>}
-      {state.matches('player.paused') && <Typography variant="h5" gutterBottom>
+      {state.matches('player.ready.paused') && <Typography variant="h5" gutterBottom>
         🎶 The music has paused 🛑
       </Typography>}
       {state.context.count > 0 && <div>Played times: {state.context.count}</div>}
