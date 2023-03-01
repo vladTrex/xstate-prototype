@@ -39,6 +39,7 @@ export const playerMachine =
                                 on: {
                                     PLAY: {
                                         target: "playing",
+                                        cond: 'has3Times'
                                     },
                                 },
                             },
